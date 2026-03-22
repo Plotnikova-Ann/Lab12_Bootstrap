@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Lab - Леонтьев</title>
+    <title>Bootstrap Lab </title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
           integrity="sha384-sRlI4kxlLFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIavNWLzeN8tE5YbujZqLJB" 
           crossorigin="anonymous" />
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
     <link rel="stylesheet" href="custom.css" />
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">MyPortfolio</a>
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-briefcase-fill"></i> MyPortfolio
+            </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#navbarNav" aria-controls="navbarNav" 
@@ -25,117 +30,451 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="#home">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">О нас</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Услуги</a>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" 
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-collection"></i> Портфолио
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-browser-chrome"></i> Веб-сайты</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-phone"></i> Приложения</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette"></i> Дизайн</a></li>
+                        </ul>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" 
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-journal"></i> Блог
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-newspaper"></i> Новости</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-text"></i> Статьи</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Туториалы</a></li>
+                        </ul>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Контакты</a>
                     </li>
                 </ul>
+                
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Поиск..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle fs-4"></i>
+                        <span class="ms-2">Профиль</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Мой профиль</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Настройки</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Выход</a></li>
+                    </ul>
+                </div>
+                
+                <button id="themeToggle" class="btn btn-outline-light ms-3">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
             </div>
         </div>
     </nav>
     
     <div class="container-fluid bg-light py-5" id="home">
         <div class="container text-center">
-            <h1 class="display-4">Добро пожаловать!</h1>
+            <h1 class="display-4">
+                <i class="bi bi-bootstrap-fill text-primary"></i> 
+                Добро пожаловать!
+            </h1>
             <p class="lead">Это пример сайта, созданного с помощью Bootstrap 5</p>
-            <button class="btn btn-primary btn-lg">Узнать больше</button>
+            <p class="text-muted">
+                <i class="bi bi-person-circle"></i> 
+                Лабораторная работа №12
+            </p>
+            <button class="btn btn-primary btn-lg">
+                <i class="bi bi-info-circle"></i> Узнать больше
+            </button>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">
+            <i class="bi bi-star-fill text-warning"></i> 
+            Мои навыки
+        </h2>
+        <div class="row text-center g-4">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-filetype-html fs-1 text-danger"></i>
+                        <h5 class="card-title mt-3">HTML</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <p class="card-text">90%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-filetype-css fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">CSS</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-primary" style="width: 85%"></div>
+                        </div>
+                        <p class="card-text">85%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-filetype-js fs-1 text-warning"></i>
+                        <h5 class="card-title mt-3">JavaScript</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-warning" style="width: 75%"></div>
+                        </div>
+                        <p class="card-text">75%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-bootstrap fs-1" style="color: #7952b3;"></i>
+                        <h5 class="card-title mt-3">Bootstrap</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar" style="width: 80%; background-color: #7952b3;"></div>
+                        </div>
+                        <p class="card-text">80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">
+            <i class="bi bi-grid-3x3-gap-fill"></i> 
+            Нестандартная сетка
+        </h2>
+        
+        <div class="row mb-3">
+            <div class="col-5 bg-primary text-white p-3 rounded-start">
+                <i class="bi bi-1-square-fill"></i> Колонка 5/12
+            </div>
+            <div class="col-7 bg-secondary text-white p-3 rounded-end">
+                <i class="bi bi-2-square-fill"></i> Колонка 7/12
+            </div>
+        </div>
+        
+        <div class="row mb-3">
+            <div class="col-8 bg-success text-white p-3 rounded-start">
+                <i class="bi bi-3-square-fill"></i> Колонка 8/12
+            </div>
+            <div class="col-4 bg-info text-white p-3 rounded-end">
+                <i class="bi bi-4-square-fill"></i> Колонка 4/12
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-2 bg-warning text-dark p-3 rounded-start">
+                <i class="bi bi-5-square-fill"></i> 2
+            </div>
+            <div class="col-6 bg-danger text-white p-3">
+                <i class="bi bi-6-square-fill"></i> 6
+            </div>
+            <div class="col-4 bg-dark text-white p-3 rounded-end">
+                <i class="bi bi-7-square-fill"></i> 4
+            </div>
         </div>
     </div>
 
     <div class="container my-5" id="services">
-        <h2 class="text-center mb-5">Наши услуги</h2>
+        <h2 class="text-center mb-5">
+            <i class="bi bi-grid-3x3-gap-fill"></i> Наши услуги
+        </h2>
         <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="https://placeholder.apptor.studio/400/200/webdev.png" 
+                         class="card-img-top zoom-img" 
+                         alt="Веб-разработка">
                     <div class="card-body">
-                        <h5 class="card-title">Веб-разработка</h5>
+                        <h5 class="card-title">
+                            <i class="bi bi-code-square text-primary"></i> Веб-разработка
+                        </h5>
                         <p class="card-text">
-                            Создаем современные адаптивные веб-сайты с использованием последних технологий и лучших практик.
+                            Создаем современные адаптивные веб-сайты с использованием последних технологий.
                         </p>
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <div class="mb-2">
+                            <i class="bi bi-clock"></i> Срок: от 14 дней
+                            <br>
+                            <i class="bi bi-chat-dots"></i> 24/7 поддержка
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-4 fw-bold text-primary">от 25 000 ₽</span>
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.9 (45 отзывов)</span>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-2">
+                            <i class="bi bi-arrow-right"></i> Заказать
+                        </button>
                     </div>
                 </div>
             </div>
             
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="https://placeholder.apptor.studio/400/200/mobile.png" 
+                         class="card-img-top zoom-img" 
+                         alt="Мобильные приложения">
                     <div class="card-body">
-                        <h5 class="card-title">Мобильные приложения</h5>
+                        <h5 class="card-title">
+                            <i class="bi bi-phone text-success"></i> Мобильные приложения
+                        </h5>
                         <p class="card-text">
-                            Разрабатываем нативные и кроссплатформенные мобильные приложения для iOS и Android.
+                            Разрабатываем нативные и кроссплатформенные приложения для iOS и Android.
                         </p>
-                        <a href="#" class="btn btn-success">Подробнее</a>
+                        <div class="mb-2">
+                            <i class="bi bi-clock"></i> Срок: от 30 дней
+                            <br>
+                            <i class="bi bi-app-indicator"></i> iOS + Android
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-4 fw-bold text-primary">от 45 000 ₽</span>
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.8 (32 отзыва)</span>
+                        </div>
+                        <button class="btn btn-success w-100 mt-2">
+                            <i class="bi bi-arrow-right"></i> Заказать
+                        </button>
                     </div>
                 </div>
             </div>
             
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="https://placeholder.apptor.studio/400/200/design.png" 
+                         class="card-img-top zoom-img" 
+                         alt="UI/UX Дизайн">
                     <div class="card-body">
-                        <h5 class="card-title">UI/UX Дизайн</h5>
+                        <h5 class="card-title">
+                            <i class="bi bi-brush text-warning"></i> UI/UX Дизайн
+                        </h5>
                         <p class="card-text">
-                            Проектируем интуитивные пользовательские интерфейсы с фокусом на удобство и эстетику.
+                            Проектируем интуитивные интерфейсы с фокусом на удобство и эстетику.
                         </p>
-                        <a href="#" class="btn btn-warning">Подробнее</a>
+                        <div class="mb-2">
+                            <i class="bi bi-clock"></i> Срок: от 10 дней
+                            <br>
+                            <i class="bi bi-figma"></i> Figma / Sketch
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-4 fw-bold text-primary">от 15 000 ₽</span>
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.9 (67 отзывов)</span>
+                        </div>
+                        <button class="btn btn-warning w-100 mt-2">
+                            <i class="bi bi-arrow-right"></i> Заказать
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
+    <div class="container my-5">
+        <h3 class="text-center mb-4">
+            <i class="bi bi-layout-text-window-reverse"></i> Наши преимущества
+        </h3>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="card horizontal-card">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="https://placeholder.apptor.studio/300/200/experience.png" 
+                                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                                 alt="Опыт"
+                                 style="object-fit: cover; height: 100%;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-trophy-fill text-warning"></i> 10+ лет опыта</h5>
+                                <p class="card-text">Более 200 успешно реализованных проектов для клиентов по всему миру.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card horizontal-card">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="https://placeholder.apptor.studio/300/200/support.png" 
+                                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                                 alt="Поддержка"
+                                 style="object-fit: cover; height: 100%;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-headset text-success"></i> 24/7 Техподдержка</h5>
+                                <p class="card-text">Круглосуточная поддержка и сопровождение ваших проектов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container my-5" id="contact">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <h2 class="text-center mb-4">Свяжитесь с нами</h2>
+            <div class="col-lg-8">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-envelope-paper-fill"></i> Свяжитесь с нами
+                </h2>
                 <form id="contactForm" class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Имя</label>
-                        <input type="text" class="form-control" id="name" 
-                               placeholder="Введите ваше имя" required>
-                        <div class="invalid-feedback">
-                            Пожалуйста, введите ваше имя
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">
+                                <i class="bi bi-person"></i> Имя <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="name" 
+                                   placeholder="Введите ваше имя" required>
+                            <div class="invalid-feedback" id="nameError">
+                                Имя должно содержать не менее 2 символов
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">
+                                <i class="bi bi-telephone"></i> Телефон <span class="text-danger">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="phone" 
+                                   placeholder="+7 (999) 123-45-67" required>
+                            <div class="invalid-feedback" id="phoneError">
+                                Введите корректный номер телефона
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">
+                                <i class="bi bi-envelope"></i> Email <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" class="form-control" id="email" 
+                                   placeholder="name@example.com" required>
+                            <div class="invalid-feedback">
+                                Пожалуйста, введите корректный email
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="topic" class="form-label">
+                                <i class="bi bi-tag"></i> Тема обращения
+                            </label>
+                            <select class="form-select" id="topic">
+                                <option value="general">Общий вопрос</option>
+                                <option value="services">Услуги</option>
+                                <option value="support">Техподдержка</option>
+                                <option value="partnership">Сотрудничество</option>
+                            </select>
                         </div>
                     </div>
                     
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" 
-                               placeholder="name@example.com" required>
-                        <div class="invalid-feedback">
-                            Пожалуйста, введите корректный email
+                        <label class="form-label">
+                            <i class="bi bi-flag"></i> Приоритет
+                        </label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="priority" 
+                                       id="priorityLow" value="low" checked>
+                                <label class="form-check-label" for="priorityLow">
+                                    <span class="badge bg-secondary">Низкий</span>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="priority" 
+                                       id="priorityMedium" value="medium">
+                                <label class="form-check-label" for="priorityMedium">
+                                    <span class="badge bg-warning text-dark">Средний</span>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="priority" 
+                                       id="priorityHigh" value="high">
+                                <label class="form-check-label" for="priorityHigh">
+                                    <span class="badge bg-danger">Высокий</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="mb-3">
-                        <label for="message" class="form-label">Сообщение</label>
+                        <label for="message" class="form-label">
+                            <i class="bi bi-chat-text"></i> Сообщение <span class="text-danger">*</span>
+                        </label>
                         <textarea class="form-control" id="message" rows="4" 
                                   placeholder="Ваше сообщение" required></textarea>
-                        <div class="invalid-feedback">
-                            Пожалуйста, введите сообщение
+                        <div class="invalid-feedback" id="messageError">
+                            Пожалуйста, введите сообщение (не менее 10 символов)
                         </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="file" class="form-label">
+                            <i class="bi bi-paperclip"></i> Прикрепить файл
+                        </label>
+                        <input type="file" class="form-control" id="file" accept=".jpg,.png,.pdf,.doc,.docx">
+                        <div class="form-text">Максимальный размер файла: 5 МБ</div>
+                        <div class="invalid-feedback" id="fileError">
+                            Файл слишком большой (макс. 5 МБ)
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">
+                            <i class="bi bi-star"></i> Оцените наш сервис
+                        </label>
+                        <input type="range" class="form-range" id="rating" min="0" max="5" step="1" value="3">
+                        <div class="text-center" id="ratingValue">⭐ 3/5</div>
                     </div>
                     
                     <div class="mb-4 form-check">
                         <input type="checkbox" class="form-check-input" id="consent" required>
                         <label class="form-check-label" for="consent">
-                            Я согласен на обработку персональных данных
+                            Я согласен на обработку персональных данных <span class="text-danger">*</span>
                         </label>
                         <div class="invalid-feedback">
                             Необходимо дать согласие
                         </div>
                     </div>
-
+                    
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-send"></i> Отправить сообщение
+                        </button>
                     </div>
                 </form>
             </div>
@@ -146,20 +485,95 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YyWJvWCxK/BmnVDxM+D2scQbITxI" 
             crossorigin="anonymous"></script>
     
+
     <script>
+
+        const themeToggle = document.getElementById('themeToggle');
+        const navbar = document.querySelector('.navbar');
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                if (navbar.classList.contains('bg-dark')) {
+                    navbar.classList.remove('bg-dark', 'navbar-dark');
+                    navbar.classList.add('bg-light', 'navbar-light');
+                    themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+                } else {
+                    navbar.classList.remove('bg-light', 'navbar-light');
+                    navbar.classList.add('bg-dark', 'navbar-dark');
+                    themeToggle.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+                }
+            });
+        }
+        
+        const ratingInput = document.getElementById('rating');
+        const ratingValue = document.getElementById('ratingValue');
+        
+        if (ratingInput && ratingValue) {
+            ratingInput.addEventListener('input', function() {
+                const stars = '⭐'.repeat(this.value);
+                ratingValue.textContent = `${stars} ${this.value}/5`;
+            });
+        }
+        
         (function() {
             'use strict';
             const form = document.getElementById('contactForm');
             
+            if (!form) return;
+            
+            const nameInput = document.getElementById('name');
+            const phoneInput = document.getElementById('phone');
+            const messageInput = document.getElementById('message');
+            const fileInput = document.getElementById('file');
+            
+            if (nameInput) {
+                nameInput.addEventListener('input', function() {
+                    if (this.value.length >= 2) {
+                        this.classList.remove('is-invalid');
+                        const nameError = document.getElementById('nameError');
+                        if (nameError) nameError.style.display = 'none';
+                    } else if (this.value.length > 0) {
+                        this.classList.add('is-invalid');
+                        const nameError = document.getElementById('nameError');
+                        if (nameError) nameError.style.display = 'block';
+                    }
+                });
+            }
+            
+            
+            
             form.addEventListener('submit', function(event) {
-                if (!form.checkValidity()) {
+            
+                let isValid = true;
+                
+                if (nameInput && nameInput.value.length < 2) {
+                    nameInput.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                const phoneRegex = /^[\+\d\s\(\)-]{10,}$/;
+                if (phoneInput && !phoneRegex.test(phoneInput.value)) {
+                    phoneInput.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                if (messageInput && messageInput.value.length < 10) {
+                    messageInput.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!form.checkValidity() || !isValid) {
                     event.preventDefault();
                     event.stopPropagation();
                 } else {
                     event.preventDefault();
-                    alert("Форма успешно отправлена!");
+                    alert("✓ Форма успешно отправлена!\n\nСпасибо за обращение. Мы свяжемся с вами в ближайшее время.");
                     form.reset();
                     form.classList.remove("was-validated");
+                    
+                    
+                    const invalidInputs = form.querySelectorAll('.is-invalid');
+                    invalidInputs.forEach(input => input.classList.remove('is-invalid'));
                 }
                 form.classList.add("was-validated");
             }, false);

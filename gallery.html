@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Lab - Леонтьев</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRlI4kxlLFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIavNWLzeN8tE5YbujZqLJB" 
+          crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="custom.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">
+            <i class="bi bi-bootstrap-fill text-primary"></i> 
+            Добро пожаловать в Bootstrap
+        </h1>
+        <p class="text-center text-success-emphasis">
+            <i class="bi bi-person-circle"></i> 
+            Лабораторная работа №12 | Студент: Леонтьев А.А.
+        </p>
+        <p class="text-center text-muted">
+            <i class="bi bi-info-circle"></i> 
+            Изучаем CSS-фреймворк Bootstrap 5
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YyWJvWCxK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
+</body>
+</html>
+ <div class="container my-5">
+        <h2 class="text-center mb-4">
+            <i class="bi bi-star-fill text-warning"></i> 
+            Мои навыки
+        </h2>
+        <div class="row text-center g-4">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-filetype-html fs-1 text-danger"></i>
+                        <h5 class="card-title mt-3">HTML</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <p class="card-text">90%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-filetype-css fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">CSS</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-primary" style="width: 85%"></div>
+                        </div>
+                        <p class="card-text">85%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-filetype-js fs-1 text-warning"></i>
+                        <h5 class="card-title mt-3">JavaScript</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-warning" style="width: 75%"></div>
+                        </div>
+                        <p class="card-text">75%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <i class="bi bi-bootstrap fs-1 text-purple" style="color: #7952b3;"></i>
+                        <h5 class="card-title mt-3">Bootstrap</h5>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar" style="width: 80%; background-color: #7952b3;"></div>
+                        </div>
+                        <p class="card-text">80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Задание 3.2: Нестандартная сетка -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">
+            <i class="bi bi-grid-3x3-gap-fill"></i> 
+            Нестандартная сетка
+        </h2>
+        
+        <!-- Первая строка: 5 и 7 -->
+        <div class="row mb-3">
+            <div class="col-5 bg-primary text-white p-3 rounded-start">
+                <i class="bi bi-1-square-fill"></i> Колонка 5/12
+            </div>
+            <div class="col-7 bg-secondary text-white p-3 rounded-end">
+                <i class="bi bi-2-square-fill"></i> Колонка 7/12
+            </div>
+        </div>
+        
+        <!-- Вторая строка: 8 и 4 -->
+        <div class="row mb-3">
+            <div class="col-8 bg-success text-white p-3 rounded-start">
+                <i class="bi bi-3-square-fill"></i> Колонка 8/12
+            </div>
+            <div class="col-4 bg-info text-white p-3 rounded-end">
+                <i class="bi bi-4-square-fill"></i> Колонка 4/12
+            </div>
+        </div>
+        
+        <!-- Третья строка: 2, 6, 4 -->
+        <div class="row">
+            <div class="col-2 bg-warning text-dark p-3 rounded-start">
+                <i class="bi bi-5-square-fill"></i> 2
+            </div>
+            <div class="col-6 bg-danger text-white p-3">
+                <i class="bi bi-6-square-fill"></i> 6
+            </div>
+            <div class="col-4 bg-dark text-white p-3 rounded-end">
+                <i class="bi bi-7-square-fill"></i> 4
+            </div>
+        </div>
+    </div>
